@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	.container
+		h1 Applicants
+		ul#applications.list-unstyled
+			for app in applicants
+				li Applicants name: #{app.name}
+				li Bio: #{app.bio}
+				li Skills: #{app.skills}
+				li Experience: #{app.years}
+				li Reason for application: #{app.why}
