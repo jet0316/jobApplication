@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	for app in applicants
+		li Applicants name: #{app.name}
+		li Bio: #{app.bio}
+		li Skills: #{app.skills}
+		li Experience: #{app.years} years
+		li Reason for application: #{app.why}

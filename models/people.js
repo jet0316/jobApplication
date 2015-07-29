@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var peopleSchema = mongoose.Schema({
-	name   : {type : String},
+	name   : {type : String, require : true},
 	bio    : {type : String},
 	skills : {type : Array},
 	years  : {type : String},

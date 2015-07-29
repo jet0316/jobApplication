@@ -27,6 +27,18 @@ var indexController = {
 				res.redirect('/applicants');
 			}
 		})
+	},
+
+	viewer: function(req, res) {
+		People.find({ _id : req.params.applicantID }, function(err, doc){
+			res.render('viewer', {applicants : doc })
+		})
+	},
+
+	deleted: function(req, res) {
+		People.remove({ _id : req.params.applicantID }, function(){
+			res.redirect('/applicants')
+		})
 	}
 }
 

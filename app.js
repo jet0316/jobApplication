@@ -20,6 +20,10 @@ app.get('/applicants', indexController.applicant)
 
 app.post('/applicant', indexController.createApplicant)
 
+app.get('/applicant/:applicantID', indexController.viewer)
+
+app.get('/delete/:applicantID', indexController.deleted)
+
 // displays a list of applicants
 
 // app.get('/applicants', function(req, res){
